@@ -9,6 +9,8 @@ rcc React Class component
 
 impt = imports prop types
 
+Props(properties) is an object that has properties of that object each one being a prop you pass in 
+
 import React from "react"; */
 
 export default class Counter extends React.Component {
@@ -75,3 +77,74 @@ export default class Counter extends React.Component {
       return <div></div>;
     }
   
+///Funcction component 
+    import React from "react"
+
+    function App() {
+        return (
+            <div>
+                <h1>Code goes here</h1>
+            </div>
+        )
+    }
+
+
+//// Class Component
+
+    import React from "react"
+    class App extends React.Component {
+        render() {
+            return (
+                <div>
+                    <h1>Code goes here</h1>
+                </div>
+            )
+        }
+    }
+    
+    export default App
+
+    //If you want a component to maintain its own data it will NEED to be a class component  
+
+    //Class with a Constructor 
+    class App extends React.Component {
+      constructor() {
+          super()
+          this.state = {
+              answer: "Yes"
+          }
+      }
+      
+      render() {
+          return (
+              <div>
+                  <h1>Is state important to know? {this.state.answer}</h1>
+              </div>
+          )
+      }
+  }
+  
+  export default App 
+
+
+
+// The First Ternary I've ever wrote! :D :D :D ! 
+class App extends React.Component {
+  constructor() {
+      super()
+      this.state= {
+          isLoggedIn: false
+      }
+  }
+  render() {
+      return (
+      <div>
+          <h1>You are currently logged (in/out): {(this.state.isLoggedIn) ? "in" : "out" }</h1>
+      </div>
+      )
+  }
+}
+
+
+
+export default App

@@ -4,8 +4,9 @@ function Movie(props) {
   return (
     <div>
       <h2>{props.information.name}</h2>
-      <img src={props.information.poster} alt="Girl in a jacket"></img>
+      <img src={props.information.poster} alt="Movie Poster"></img>
       <p>{props.information.plot}</p>
+      <hr />
     </div>
   );
 }

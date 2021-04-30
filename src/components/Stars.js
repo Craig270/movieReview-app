@@ -20,6 +20,7 @@ export default class Stars extends Component {
             <label htmlFor={1}>☆</label>
           </div>
         </div>
+        <hr />
       </div>
     );
   }
