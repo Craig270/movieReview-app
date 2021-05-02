@@ -148,3 +148,98 @@ class App extends React.Component {
 
 
 export default App
+//Handling Events Expample 
+import React from "react"
+
+function handleClick() {
+    console.log("I was clicked")
+}
+
+// https://reactjs.org/docs/events.html#supported-events
+
+function App() {
+    return (
+        <div>
+            <img onMouseOver={() => console.log("Hovered!")} src="https://www.fillmurray.com/200/100"/>
+            <br />
+            <br />
+            <button onClick={handleClick}>Click me</button>
+        </div>
+    )
+}
+
+export default App
+//Components maintain their own data with state and change their own data using setState 
+import React from "react"
+
+class App extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            count: 0
+        }
+        this.handleClick = this.handleClick.bind(this)
+    }
+    
+    handleClick() {
+        this.setState(prevState => {
+            return {
+                count: prevState.count + 1
+            }
+        })
+    }
+    
+    render() {
+        return (
+            <div>
+                <h1>{this.state.count}</h1>
+                <button onClick={this.handleClick}>Change!</button>
+            </div>
+        )
+    }
+}
+
+export default App
+
+//Life cycle methods 
+import React, {Component} from "react"
+
+// https://engineering.musefind.com/react-lifecycle-methods-how-and-when-to-use-them-2111a1b692b1
+// https://reactjs.org/blog/2018/03/29/react-v-16-3.html#component-lifecycle-changes
+
+class TodoList extends Component {
+    constructor() {
+        super()
+        this.state = {}
+    }
+    
+    componentDidMount() {
+        // GET the data I need to correctly display
+    }
+    
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.whatever !== this.props.whatever) {
+            // do something important here
+        }
+    }
+    
+    shouldComponentUpdate(nextProps, nextState) {
+        // return true if want it to update
+        // return false if not
+    }
+    
+    componentWillUnmount() {
+        // teardown or cleanup your code before your component disappears
+        // (E.g. remove event listeners)
+    }
+    
+    render() {
+        return (
+            <div>
+                Code goes here
+            </div>
+        )
+    }
+}
+
+export default App
