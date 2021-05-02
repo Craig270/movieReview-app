@@ -12,6 +12,9 @@ class Form extends React.Component {
       prevReview2: "Nathan",
       prevReview22: "I thought it was the best movie I'd ever seen!",
       prevReview222: "4",
+      post3: "Craig",
+      post33: "This movie is amazing!",
+      post333: "4",
       name: "",
       review: "",
       stars: "",
@@ -69,6 +72,10 @@ class Form extends React.Component {
             {this.state.prevReview2} : {this.state.prevReview22} <br></br>
             {this.state.prevReview222} Stars!
           </p>
+          <p>
+            {this.state.post3} : {this.state.post33} <br></br>
+            {this.state.post333} Stars!
+          </p>
 
           <label>Name</label>
           <input
@@ -76,6 +83,7 @@ class Form extends React.Component {
             value={this.state.name}
             onChange={this.handleNameChange}
             name="name"
+            placeholder="Craig"
           />
         </div>
         <div>

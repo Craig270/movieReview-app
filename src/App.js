@@ -40,8 +40,8 @@ const App = () => {
       </div>
       <div class="row">
         <div class="col-md-4 bg-secondary">
-          <Review />
-          {/* <Form /> */}
+          {/* <Review /> */}
+          <Form />
           <oneMovie />
         </div>
         <div class="col-md-8 bg-info">{movieDetails}</div>
